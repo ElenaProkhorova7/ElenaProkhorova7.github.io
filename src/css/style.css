@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-	width: 100vw
+	width: 100vw;
 	height: 60px;
 	background: #344051;
 }
@@ -36,7 +36,6 @@ nav {
 	height: 100%;
 	background: url(../img/bg-1.jpg) center/cover no-repeat;
 }
-
 .title_cont {
 	float: left;
 	margin: 432px 0px 0px 404px;
@@ -64,5 +63,5 @@ nav {
 	font-size: 13px;
 	padding: 0px 20px;
 	margin: 40px 10px 0px 0px;
-
 }
+
