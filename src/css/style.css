@@ -65,3 +65,63 @@ nav {
 	margin: 40px 10px 0px 0px;
 }
 
+.About {
+	width: 100vw;
+	height: auto;
+	background: #fff;
+	text-align: center;
+	padding: 80px 0;
+}
+
+.About h2 {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2c384a;	
+}
+.line {
+	width: 80px;
+	height: 2px;
+	background: #d17700;
+	margin: 30px auto 50px;
+}
+.About p {
+	font-size: 18px;
+	font-weight: normal;
+	color: #3f495a;
+	width: 50%;
+	margin: 30px auto 20px auto;
+}
+.About button {
+	height: 40px;
+	text-align: center;
+	border: 2px solid #79818d;
+	background: none;
+	border-radius: 5px;
+	color: #79818d;
+	font-size: 13px;
+	padding: 0px 20px;
+	margin: 40px 10px 0px 0px;
+}
+
+.Skills {
+	width: 100vw;
+	height: auto;
+	background: #fff;
+	text-align: center;
+	padding: 80px 0;
+	background: url(../img/bg-2.jpg) center/cover no-repeat;
+}
+.Skills h2 {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2c384a;
+}
+
+.skill-box {
+	width: 20%;
+	height: auto;
+	padding: 20px 20px;
+	float: left;
+}
