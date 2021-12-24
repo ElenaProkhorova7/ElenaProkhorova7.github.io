@@ -18,7 +18,7 @@ nav {
 	padding-right: 432px;
 	animation: coming 2s;
 }
-@keyfames coming {
+@keyframes coming {
 	from{opacity: 0; 	}
 	to{opacity: 100; 	}
 }
@@ -27,15 +27,27 @@ nav {
 	float: left;
 
 }
+@keyframes topshift {
+	from {
+		opacity: 0;
+		margin-top: -80px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+
 
 .menu li {
 	float: left;
 	line-height: 60px;
+	opacity: 0;
 	color: #fff;
 	margin-right: 40px;
 	font-size: 16px;
 	text-transform: uppercase;
-	animation: topshift 0.4s; 
+	animation: topshift 0.4s ease forwards; 
 }
 
 
@@ -55,30 +67,30 @@ nav {
 		transform: scale(1.1);
 }
 
-.menu li: ntl-child(2) {
+.menu li:nth-child(2) {
 	animation-delay: 0.4s;
 }
-.menu li: ntl-child(3) {
+.menu li:nth-child(3) {
 	animation-delay: 0.8s;
 }
-.menu li: ntl-child(4) {
+.menu li:nth-child(4) {
 	animation-delay: 1.2s;
 }
-.menu li: ntl-child(5) {
+.menu li:nth-child(5) {
 	animation-delay: 1.6s;
 }
-.menu li: ntl-child(6) {
+.menu li:nth-child(6) {
 	animation-delay: 2s;
 }
 
-@keyframe topshift {
+@keyframes titlemove {
 	from {
 		opacity: 0;
-		margin-top: -80px;
+		margin-left: -500px;
 	}
 	to {
 		opacity: 1;
-		margin-top: 0px;
+		margin-left: 404px;
 	}
 }
 
@@ -89,10 +101,14 @@ nav {
 }
 .title_cont {
 	float: left;
+	opacity: 0;
 	margin: 432px 0px 0px 404px;
 	color: #2c384a;
 	text-align: center;
+	animation: titlemove 1s ease forwards;
+	animation-delay: 2.4s;
 }
+
 
 .title_cont h1 {
 	font-size: 60px;
@@ -295,19 +311,44 @@ nav {
 .Calculation h4 {
 	font-size: 18px;
 	font-weight: 500;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	color: #2c384a;
 	margin-left: 494px;
 }
-.select {
-	display: block;
+
+	#type_site{
+		display: block;
 	border: 1px solid #cecece;
 	background-color: #F6F6f6;
-	width: 890px;
+	width: 930px;
+	height: 50px;
 	padding: 4px 15px 4px 10px;
 	color: #444;
-	margin: 0px auto;
+	margin: 0px auto 40px  auto;
 	}
+
+#adaptivity{
+		display: block;
+	border: 1px solid #cecece;
+	background-color: #F6F6f6;
+	width: 930px;
+	height: 50px;
+	padding: 4px 15px 4px 10px;
+	color: #444;
+	margin: 0px auto 40px  auto;
+	}
+
+	#design{
+		display: block;
+	border: 1px solid #cecece;
+	background-color: #F6F6f6;
+	width: 930px;
+	height: 50px;
+	padding: 4px 15px 4px 10px;
+	color: #444;
+	margin: 0px auto 40px  auto;
+	}
+
 	.line_gray {
 		margin: 40px 0px 20px 494px;
 		width: 890px;
@@ -394,11 +435,12 @@ nav {
 
 .Contacts {
 	width: 100vw;
-	height: 1000px;
+	height: 850px;
 	background: url(../img/bg-4.jpg) center/cover no-repeat;
 	padding: 80px 0px;
 	text-align: center;
 }
+
 .Contacts h2 {
 	font-size: 20px;
 	font-weight: bold;
@@ -417,7 +459,7 @@ nav {
 	font-weight: 400;
 	color: #fff;
 	margin: 30px auto;
-	width: 780px;
+	
 }
 .contact-box {
 	width: 240px;
@@ -430,15 +472,91 @@ nav {
 	height: 110px;
 	text-align: center;
 	float: left; 
+	margin-left: 640px;
 	
 }
-.Contact h4 {
+.Contacts h4 {
 	font-size: 18px;
 	font-weight: 500;
 	margin: 30px auto;
-	color: #eee;
+	color: white;
 }
+
+
 .contacts-wrp {
 	height: 150px;
 	margin: 0px auto;
+}
+
+.text-field__input {
+	height: 35px;
+	width: 350px;
+	margin-left: 33px;
+	margin-right: 30px;
+	padding: 10px;
+	background-color: #f3f3f3;
+	opacity: 0.8;
+}
+.text-field__input2 {
+	height: 35px;
+	width: 350px;
+	padding: 10px;
+	background-color: #f3f3f3;
+	opacity: 0.8;
+}
+
+.text-field__input3 {
+	height: 100px;
+	width: 730px;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-left: 33px;
+	background-color: #f3f3f3;
+	opacity: 0.8;
+}
+
+.form_submit  {
+	height: 40px;
+	text-align: center;
+	border: 2px solid white;
+	background: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 13px;
+	padding: 0px 20px;
+	margin: 10px 0px;
+}
+.form_submit  {
+	transition: all 0.2s;
+	transform: scale(1);
+}
+.form_submit:hover {
+	background: #344051;
+	color: white;
+	border: 2px solid #344051;
+} 
+.form_submit:active{
+	transform: scale(1.1);
+}
+.social-net_box1{
+	display: block;
+	margin-left: 758px;
+	margin-top: 60px;
+	float: left;
+}
+.social-net_box{
+	display: block;
+	margin-left: 54px;
+	margin-top: 60px;
+	float: left;
+}
+
+.footer{
+	width: 100%;
+		padding: 40px 0px;
+	text-align: center;
+	background: #354051;
+}
+.footer p{
+	color: white;
 }
