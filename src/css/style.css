@@ -6,6 +6,7 @@ nav {
 	width: 100vw;
 	height: 60px;
 	background: #344051;
+	position: fixed;
 }
 
 .logo {
@@ -15,6 +16,11 @@ nav {
 	padding-left: 388px;
 	float: left;
 	padding-right: 432px;
+	animation: coming 2s;
+}
+@keyfames coming {
+	from{opacity: 0; 	}
+	to{opacity: 100; 	}
 }
 
 .menu {
@@ -29,11 +35,56 @@ nav {
 	margin-right: 40px;
 	font-size: 16px;
 	text-transform: uppercase;
+	animation: topshift 0.4s; 
+}
+
+
+.menu li a{
+	transition: all 0.2s;
+	color: white;
+	transform: scale(1);
+	display: inline-block;
+}
+.menu li a:visited{
+	color: white;
+}
+.menu li a:hover{
+	color: orange;
+}
+.menu li a:active{
+		transform: scale(1.1);
+}
+
+.menu li: ntl-child(2) {
+	animation-delay: 0.4s;
+}
+.menu li: ntl-child(3) {
+	animation-delay: 0.8s;
+}
+.menu li: ntl-child(4) {
+	animation-delay: 1.2s;
+}
+.menu li: ntl-child(5) {
+	animation-delay: 1.6s;
+}
+.menu li: ntl-child(6) {
+	animation-delay: 2s;
+}
+
+@keyframe topshift {
+	from {
+		opacity: 0;
+		margin-top: -80px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
 }
 
 .Hero {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background: url(../img/bg-1.jpg) center/cover no-repeat;
 }
 .title_cont {
@@ -63,6 +114,18 @@ nav {
 	font-size: 13px;
 	padding: 0px 20px;
 	margin: 40px 10px 0px 0px;
+}
+.title_cont button {
+	transition: all 0.2s;
+	transform: scale(1);
+}
+.title_cont button:hover {
+	background: #344051;
+	color: white;
+	border: 2px solid #344051;
+} 
+.title_cont button:active{
+	transform: scale(1.1);
 }
 
 .About {
@@ -243,7 +306,7 @@ nav {
 	width: 890px;
 	padding: 4px 15px 4px 10px;
 	color: #444;
-	margin-left: 494px;
+	margin: 0px auto;
 	}
 	.line_gray {
 		margin: 40px 0px 20px 494px;
@@ -367,11 +430,15 @@ nav {
 	height: 110px;
 	text-align: center;
 	float: left; 
-	margin-left: 607px;
+	
 }
 .Contact h4 {
 	font-size: 18px;
 	font-weight: 500;
 	margin: 30px auto;
 	color: #eee;
+}
+.contacts-wrp {
+	height: 150px;
+	margin: 0px auto;
 }
